@@ -1,7 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { PrismaClient } from "@prisma/client";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 const tag = `Browser QA ${Date.now()}`;
 const created = new Set<string>();
 async function login(page: Page, role = "admin") {
@@ -27,7 +27,9 @@ async function create(page: Page, resource: string, body: unknown) {
   return record;
 }
 test.afterAll(async () => {
-  const env = readFileSync("apps/api/.env", "utf8");
+  const env = existsSync("apps/api/.env")
+    ? readFileSync("apps/api/.env", "utf8")
+    : "";
   const url =
     process.env.DATABASE_URL || env.match(/^DATABASE_URL=(.*)$/m)?.[1]?.trim();
   if (!url) return;
@@ -376,6 +378,11 @@ test("responsive layouts, accessible dialogs and automated WCAG checks", async (
   ]) {
     await page.goto(route);
     await page.locator("h1").waitFor();
+    await page.locator(".page").evaluate(async (element) => {
+      await Promise.all(
+        element.getAnimations().map((animation) => animation.finished),
+      );
+    });
     const results = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
       .analyze();

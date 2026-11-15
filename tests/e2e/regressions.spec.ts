@@ -1,6 +1,6 @@
 import { test, expect, type Page } from "@playwright/test";
 import { PrismaClient } from "@prisma/client";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 
 const tag = `Final regression ${Date.now()}`;
 const created = new Set<string>();
@@ -40,7 +40,9 @@ async function mockSnapshot(page: Page, snapshot: any) {
 }
 
 test.afterAll(async () => {
-  const env = readFileSync("apps/api/.env", "utf8");
+  const env = existsSync("apps/api/.env")
+    ? readFileSync("apps/api/.env", "utf8")
+    : "";
   const url =
     process.env.DATABASE_URL || env.match(/^DATABASE_URL=(.*)$/m)?.[1]?.trim();
   if (!url) return;
