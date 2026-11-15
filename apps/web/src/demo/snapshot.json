@@ -1,0 +1,1834 @@
+{
+  "user": {
+    "id": "portfolio-visitor",
+    "name": "Portfolio Visitor",
+    "email": "visitor@pharmaflow.example",
+    "role": "admin",
+    "demo": true
+  },
+  "resources": {
+    "roles": [
+      {
+        "id": "admin",
+        "name": "admin",
+        "description": "admin system role",
+        "permissions": ["all"]
+      },
+      {
+        "id": "pharmacist",
+        "name": "pharmacist",
+        "description": "pharmacist system role",
+        "permissions": ["pharmacy:write", "finance:read", "settings:read"]
+      },
+      {
+        "id": "cashier",
+        "name": "cashier",
+        "description": "cashier system role",
+        "permissions": ["checkout", "customers:write", "register:own"]
+      }
+    ],
+    "batches": [
+      {
+        "id": "acda0c1a-2d38-4c17-9c0c-3eae785cbe1b",
+        "status": "quarantined",
+        "location": "Quarantine",
+        "quantity": 10,
+        "createdAt": "2026-11-15T04:00:21.853Z",
+        "expiryDate": "2027-09-11",
+        "medicineId": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d",
+        "supplierId": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "batchNumber": "QA-DEMO-01",
+        "sellingPrice": 1400,
+        "purchasePrice": 800
+      },
+      {
+        "id": "766e9993-9d73-4583-badf-1be3637df803",
+        "status": "expired",
+        "location": "Expired hold",
+        "quantity": 15,
+        "createdAt": "2026-11-15T04:00:21.831Z",
+        "expiryDate": "2026-10-26",
+        "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2",
+        "supplierId": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "batchNumber": "EXP-DEMO-01",
+        "sellingPrice": 250,
+        "purchasePrice": 120
+      },
+      {
+        "id": "d03bee46-364a-4c2c-9a07-edb1d3d39edb",
+        "status": "active",
+        "location": "Shelf E",
+        "quantity": 20,
+        "createdAt": "2026-11-15T04:00:21.808Z",
+        "expiryDate": "2027-12-10",
+        "medicineId": "eb30c1bc-e3ec-43ce-9f79-2c8ca1ea10da",
+        "supplierId": "99393930-10ac-4d2a-ae87-79ae3cc20b4f",
+        "batchNumber": "B-2026-015",
+        "sellingPrice": 900,
+        "purchasePrice": 500,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "6e3ac9c7-0cba-44b9-8a87-b66ea991a7af",
+        "status": "active",
+        "location": "Shelf D",
+        "quantity": 46,
+        "createdAt": "2026-11-15T04:00:21.764Z",
+        "expiryDate": "2027-11-25",
+        "medicineId": "101b7c06-45e0-4c99-af0e-9b22f5abce17",
+        "supplierId": "bdb9f1b2-906c-4cbf-9907-af25f07c0469",
+        "batchNumber": "B-2026-014",
+        "sellingPrice": 300,
+        "purchasePrice": 150,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "3c84293f-7e1c-44ce-8793-84d973fa6ed6",
+        "status": "active",
+        "location": "Shelf C",
+        "quantity": 199,
+        "createdAt": "2026-11-15T04:00:21.719Z",
+        "expiryDate": "2027-11-10",
+        "medicineId": "62d67a48-83eb-4fa9-bb5b-035bb43915c0",
+        "supplierId": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "batchNumber": "B-2026-013",
+        "sellingPrice": 180,
+        "purchasePrice": 90,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "1da7a28a-9765-44ce-ac66-3a5b7efb0a02",
+        "status": "active",
+        "location": "Shelf B",
+        "quantity": 107,
+        "createdAt": "2026-11-15T04:00:21.676Z",
+        "expiryDate": "2027-10-26",
+        "medicineId": "ea616d33-d076-47f7-9600-990aa7a37d92",
+        "supplierId": "99393930-10ac-4d2a-ae87-79ae3cc20b4f",
+        "batchNumber": "B-2026-012",
+        "sellingPrice": 300,
+        "purchasePrice": 150,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "ccbd14c3-2190-4809-b241-31cdee921bfa",
+        "status": "active",
+        "location": "Shelf A",
+        "quantity": 6,
+        "createdAt": "2026-11-15T04:00:21.634Z",
+        "expiryDate": "2027-10-11",
+        "medicineId": "3755cf09-3888-4324-b6e7-c8f1bcabf73e",
+        "supplierId": "bdb9f1b2-906c-4cbf-9907-af25f07c0469",
+        "batchNumber": "B-2026-011",
+        "sellingPrice": 1500,
+        "purchasePrice": 900,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "58b70d23-a7d5-464b-b3d5-7ee3057520e0",
+        "status": "active",
+        "location": "Shelf E",
+        "quantity": 27,
+        "createdAt": "2026-11-15T04:00:21.592Z",
+        "expiryDate": "2027-09-26",
+        "medicineId": "de12bf8a-0d8b-46c4-abbb-de91c2b2ad8c",
+        "supplierId": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "batchNumber": "B-2026-010",
+        "sellingPrice": 1800,
+        "purchasePrice": 1100,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "0d3e7408-b036-4f0a-b6f3-085df74102bb",
+        "status": "active",
+        "location": "Shelf D",
+        "quantity": 35,
+        "createdAt": "2026-11-15T04:00:21.554Z",
+        "expiryDate": "2027-09-11",
+        "medicineId": "91e2c785-b5d9-4fe7-b871-c1bfd93e6781",
+        "supplierId": "99393930-10ac-4d2a-ae87-79ae3cc20b4f",
+        "batchNumber": "B-2026-009",
+        "sellingPrice": 1800,
+        "purchasePrice": 1200,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "b5f7acca-232c-4019-98e4-3f743047fcb8",
+        "status": "active",
+        "location": "Shelf C",
+        "quantity": 9,
+        "createdAt": "2026-11-15T04:00:21.517Z",
+        "expiryDate": "2026-12-30",
+        "medicineId": "98453472-e593-4f53-9504-adb6c2a87b35",
+        "supplierId": "bdb9f1b2-906c-4cbf-9907-af25f07c0469",
+        "batchNumber": "B-2026-008",
+        "sellingPrice": 1000,
+        "purchasePrice": 550,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "7f655d8b-4fcf-4776-9d51-e92f055151ca",
+        "status": "active",
+        "location": "Shelf B",
+        "quantity": 118,
+        "createdAt": "2026-11-15T04:00:21.481Z",
+        "expiryDate": "2027-08-12",
+        "medicineId": "6fe2f7eb-b973-4bf6-ab82-cf5285a59d41",
+        "supplierId": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "batchNumber": "B-2026-007",
+        "sellingPrice": 350,
+        "purchasePrice": 180,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "dabe89a3-f0f0-4abc-84f1-ca4116b2fb64",
+        "status": "active",
+        "location": "Shelf A",
+        "quantity": 95,
+        "createdAt": "2026-11-15T04:00:21.439Z",
+        "expiryDate": "2027-07-28",
+        "medicineId": "7ec7a469-f68f-4153-907e-476cd25b1d13",
+        "supplierId": "99393930-10ac-4d2a-ae87-79ae3cc20b4f",
+        "batchNumber": "B-2026-006",
+        "sellingPrice": 450,
+        "purchasePrice": 220,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "5c002b21-d63b-4897-a1a3-58673e24f36c",
+        "status": "active",
+        "location": "Shelf E",
+        "quantity": 17,
+        "createdAt": "2026-11-15T04:00:21.398Z",
+        "expiryDate": "2026-12-05",
+        "medicineId": "c8c17772-e5b3-4692-9d4d-88624899e63d",
+        "supplierId": "bdb9f1b2-906c-4cbf-9907-af25f07c0469",
+        "batchNumber": "B-2026-005",
+        "sellingPrice": 250,
+        "purchasePrice": 100,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "71698848-f67d-4500-8497-ba0c19849877",
+        "status": "active",
+        "location": "Shelf D",
+        "quantity": 39,
+        "createdAt": "2026-11-15T04:00:21.359Z",
+        "expiryDate": "2027-06-28",
+        "medicineId": "d8601a33-cf6a-43bd-9d7b-3dfa9a1b3ef3",
+        "supplierId": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "batchNumber": "B-2026-004",
+        "sellingPrice": 800,
+        "purchasePrice": 420,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "32bae3ff-1a8e-4e54-8dd3-b7a550573ffb",
+        "status": "active",
+        "location": "Shelf C",
+        "quantity": 63,
+        "createdAt": "2026-11-15T04:00:21.318Z",
+        "expiryDate": "2027-06-13",
+        "medicineId": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d",
+        "supplierId": "99393930-10ac-4d2a-ae87-79ae3cc20b4f",
+        "batchNumber": "B-2026-003",
+        "sellingPrice": 1400,
+        "purchasePrice": 800,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "50053e2f-ef9c-45f2-9052-e1c819c99ddb",
+        "status": "active",
+        "location": "Shelf B",
+        "quantity": 80,
+        "createdAt": "2026-11-15T04:00:21.268Z",
+        "expiryDate": "2027-05-29",
+        "medicineId": "f44762c2-9af5-4ec7-b879-466c7f94eba2",
+        "supplierId": "bdb9f1b2-906c-4cbf-9907-af25f07c0469",
+        "batchNumber": "B-2026-002",
+        "sellingPrice": 600,
+        "purchasePrice": 320,
+        "manufacturingDate": "2026-05-19"
+      },
+      {
+        "id": "662d1992-8bf1-421d-b545-76298dcca670",
+        "status": "active",
+        "location": "Shelf A",
+        "quantity": 146,
+        "createdAt": "2026-11-15T04:00:21.213Z",
+        "expiryDate": "2027-05-14",
+        "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2",
+        "supplierId": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "batchNumber": "B-2026-001",
+        "sellingPrice": 250,
+        "purchasePrice": 120,
+        "manufacturingDate": "2026-05-19"
+      }
+    ],
+    "customer-groups": [
+      {
+        "id": "33ffffb2-e676-48a6-bebd-c0c5efb25909",
+        "name": "Standard",
+        "createdAt": "2026-11-15T04:00:20.997Z",
+        "description": "Regular customers",
+        "discountPercentage": 0
+      },
+      {
+        "id": "1751c201-4ee4-494d-8631-39cbd4faded2",
+        "name": "Loyalty Members",
+        "createdAt": "2026-11-15T04:00:20.967Z",
+        "description": "Demo loyalty programme",
+        "discountPercentage": 5
+      }
+    ],
+    "expenses": [
+      {
+        "id": "14d6d5f6-1caf-47c9-bad7-407c62ab836c",
+        "date": "2026-11-12",
+        "notes": "Fictional demo operating expense",
+        "title": "Delivery costs",
+        "amount": 3200,
+        "category": "Logistics",
+        "createdAt": "2026-11-15T04:00:22.526Z",
+        "paymentMethod": "bank-transfer"
+      },
+      {
+        "id": "ae0a07ae-af5a-4b37-9748-69b8abcf11d2",
+        "date": "2026-11-12",
+        "notes": "Fictional demo operating expense",
+        "title": "Staff supplies",
+        "amount": 7500,
+        "category": "Office",
+        "createdAt": "2026-11-15T04:00:22.501Z",
+        "paymentMethod": "bank-transfer"
+      },
+      {
+        "id": "807853e1-59e1-4f65-b557-53e42d5a629c",
+        "date": "2026-11-12",
+        "notes": "Fictional demo operating expense",
+        "title": "Electricity bill",
+        "amount": 18000,
+        "category": "Utilities",
+        "createdAt": "2026-11-15T04:00:22.475Z",
+        "paymentMethod": "bank-transfer"
+      },
+      {
+        "id": "d506dc63-15e4-4365-b12e-c08be5fbfe04",
+        "date": "2026-11-12",
+        "notes": "Fictional demo operating expense",
+        "title": "Monthly rent",
+        "amount": 120000,
+        "category": "Rent",
+        "createdAt": "2026-11-15T04:00:22.446Z",
+        "paymentMethod": "bank-transfer"
+      }
+    ],
+    "income": [
+      {
+        "id": "3f55ea2b-368f-4f38-9858-c4852f070639",
+        "date": "2026-11-14",
+        "notes": "Fictional non-sales service income",
+        "title": "Health screening workshop",
+        "amount": 25000,
+        "category": "Services",
+        "createdAt": "2026-11-15T04:00:22.552Z",
+        "paymentMethod": "cash"
+      }
+    ],
+    "payments": [
+      {
+        "id": "c95b83da-3940-4b53-ba3e-89bf06c4405b",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 750,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.416Z",
+        "reference": "PAY-1794715222416-4800",
+        "relatedId": "6640eb01-8fd1-4d5d-bdd2-303b82fa4079",
+        "paymentMethod": "card"
+      },
+      {
+        "id": "7b13ec91-9168-4d04-8d13-5b998ca88c72",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 600,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.371Z",
+        "reference": "PAY-1794715222371-82fb",
+        "relatedId": "a21c340d-03e6-4bab-b61d-eb1058b10fd6",
+        "paymentMethod": "cash"
+      },
+      {
+        "id": "f932ee39-a6e9-4a7b-a040-4cb1a804eab2",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 180,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.326Z",
+        "reference": "PAY-1794715222326-2941",
+        "relatedId": "ddb23f80-cb35-48b6-a932-0f0498f16e3d",
+        "paymentMethod": "card"
+      },
+      {
+        "id": "5f8f098c-2e44-4e86-a2b2-82f54e94ae88",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 900,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.292Z",
+        "reference": "PAY-1794715222292-f659",
+        "relatedId": "d5c4c587-6d6c-4126-b607-c01418bfc12b",
+        "paymentMethod": "cash"
+      },
+      {
+        "id": "210ab82b-5525-4ff9-bf4d-1d3726dd3892",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 3000,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.250Z",
+        "reference": "PAY-1794715222250-90c1",
+        "relatedId": "70957d09-da12-4587-922d-869f08e4bc2f",
+        "paymentMethod": "card"
+      },
+      {
+        "id": "a65c3052-4939-4156-ab56-4779e4a43d2e",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 1800,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.209Z",
+        "reference": "PAY-1794715222209-1b7a",
+        "relatedId": "83820f75-2a0f-4b5b-ad79-0d850a4e6f28",
+        "paymentMethod": "cash"
+      },
+      {
+        "id": "ef230637-1ad1-4c4b-9fdc-c015a41cc02b",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 3000,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.177Z",
+        "reference": "PAY-1794715222177-8302",
+        "relatedId": "a53f4be8-d33e-4fa6-ab3a-fb133ad6c09b",
+        "paymentMethod": "card"
+      },
+      {
+        "id": "c37883e3-8636-4400-ae77-fc36b8e701a4",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 700,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.143Z",
+        "reference": "PAY-1794715222143-1038",
+        "relatedId": "a4760bb0-8d77-48c9-9729-d863a75c7f89",
+        "paymentMethod": "cash"
+      },
+      {
+        "id": "b44c6ab6-fc9d-47e9-817c-12b5891b4874",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 250,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.112Z",
+        "reference": "PAY-1794715222112-f59a",
+        "relatedId": "7eead111-34d9-4f7c-95d3-85291071124e",
+        "paymentMethod": "card"
+      },
+      {
+        "id": "f61b3b90-83cf-4fb2-933c-9f8da9a2882c",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 2400,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.080Z",
+        "reference": "PAY-1794715222080-e00d",
+        "relatedId": "fb44a2ee-f4fd-4ee5-8c38-1f818eca958b",
+        "paymentMethod": "cash"
+      },
+      {
+        "id": "1f3b1b3b-c9a3-4a66-8698-2a3f45afa623",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 2800,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.048Z",
+        "reference": "PAY-1794715222048-d0ec",
+        "relatedId": "67c22992-715b-412f-8392-40b10acdba2f",
+        "paymentMethod": "card"
+      },
+      {
+        "id": "14cd5a5f-34cb-4a45-8362-2bac2070706c",
+        "date": "2026-11-15",
+        "type": "incoming",
+        "notes": "Sale payment",
+        "amount": 250,
+        "status": "completed",
+        "createdAt": "2026-11-15T04:00:22.011Z",
+        "reference": "PAY-1794715222011-48b1",
+        "relatedId": "b4c2d928-7846-44c0-8b29-fa1e4f274b70",
+        "paymentMethod": "cash"
+      }
+    ],
+    "staff": [],
+    "notifications": [
+      {
+        "id": "b838ec6f-2d77-4dc6-97c3-ab96a0a2fd79",
+        "link": "/help",
+        "type": "info",
+        "title": "Welcome to PharmaFlow",
+        "isRead": false,
+        "message": "All records in this workspace are fictional demonstration data.",
+        "createdAt": "2026-11-15T04:00:22.659Z"
+      },
+      {
+        "id": "fdbb503b-cf45-4947-b680-9e0db9b3fef2",
+        "link": "/inventory",
+        "type": "warning",
+        "title": "Expiry attention",
+        "isRead": false,
+        "message": "Cetirizine batch expires within 30 days.",
+        "createdAt": "2026-11-15T04:00:22.634Z"
+      },
+      {
+        "id": "2963bb9e-d33d-42fd-961d-85fbf129e036",
+        "link": "/inventory",
+        "type": "warning",
+        "title": "Low stock warning",
+        "isRead": false,
+        "message": "Antacid Suspension is below its reorder level.",
+        "createdAt": "2026-11-15T04:00:22.610Z"
+      }
+    ],
+    "movements": [
+      {
+        "id": "db113e09-1752-4e6f-819f-49288f3cb5d8",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "662d1992-8bf1-421d-b545-76298dcca670",
+        "quantity": -3,
+        "createdAt": "2026-11-15T04:00:22.413Z",
+        "reference": "6640eb01-8fd1-4d5d-bdd2-303b82fa4079",
+        "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2"
+      },
+      {
+        "id": "74e5c140-8fa2-422e-a7a1-fdb667592ac8",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "6e3ac9c7-0cba-44b9-8a87-b66ea991a7af",
+        "quantity": -2,
+        "createdAt": "2026-11-15T04:00:22.368Z",
+        "reference": "a21c340d-03e6-4bab-b61d-eb1058b10fd6",
+        "medicineId": "101b7c06-45e0-4c99-af0e-9b22f5abce17"
+      },
+      {
+        "id": "3e1b19cf-e03c-44f5-92d7-476d3d55a441",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "3c84293f-7e1c-44ce-8793-84d973fa6ed6",
+        "quantity": -1,
+        "createdAt": "2026-11-15T04:00:22.324Z",
+        "reference": "ddb23f80-cb35-48b6-a932-0f0498f16e3d",
+        "medicineId": "62d67a48-83eb-4fa9-bb5b-035bb43915c0"
+      },
+      {
+        "id": "b4a5c9bc-51c8-4ee3-b8ec-fa76bab1cf1b",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "1da7a28a-9765-44ce-ac66-3a5b7efb0a02",
+        "quantity": -3,
+        "createdAt": "2026-11-15T04:00:22.289Z",
+        "reference": "d5c4c587-6d6c-4126-b607-c01418bfc12b",
+        "medicineId": "ea616d33-d076-47f7-9600-990aa7a37d92"
+      },
+      {
+        "id": "d86577ce-4b86-431f-a172-d7988f85f7ae",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "ccbd14c3-2190-4809-b241-31cdee921bfa",
+        "quantity": -2,
+        "createdAt": "2026-11-15T04:00:22.247Z",
+        "reference": "70957d09-da12-4587-922d-869f08e4bc2f",
+        "medicineId": "3755cf09-3888-4324-b6e7-c8f1bcabf73e"
+      },
+      {
+        "id": "07d113c4-c005-436d-bbb1-96b5365ce350",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "58b70d23-a7d5-464b-b3d5-7ee3057520e0",
+        "quantity": -1,
+        "createdAt": "2026-11-15T04:00:22.206Z",
+        "reference": "83820f75-2a0f-4b5b-ad79-0d850a4e6f28",
+        "medicineId": "de12bf8a-0d8b-46c4-abbb-de91c2b2ad8c"
+      },
+      {
+        "id": "323a4432-a547-4068-bd72-f05ef64e8545",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "b5f7acca-232c-4019-98e4-3f743047fcb8",
+        "quantity": -3,
+        "createdAt": "2026-11-15T04:00:22.175Z",
+        "reference": "a53f4be8-d33e-4fa6-ab3a-fb133ad6c09b",
+        "medicineId": "98453472-e593-4f53-9504-adb6c2a87b35"
+      },
+      {
+        "id": "c3e5540a-1650-4f1d-a137-337d5e528e12",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "7f655d8b-4fcf-4776-9d51-e92f055151ca",
+        "quantity": -2,
+        "createdAt": "2026-11-15T04:00:22.141Z",
+        "reference": "a4760bb0-8d77-48c9-9729-d863a75c7f89",
+        "medicineId": "6fe2f7eb-b973-4bf6-ab82-cf5285a59d41"
+      },
+      {
+        "id": "521a4952-687f-492e-a49d-2624c44a5f53",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "5c002b21-d63b-4897-a1a3-58673e24f36c",
+        "quantity": -1,
+        "createdAt": "2026-11-15T04:00:22.110Z",
+        "reference": "7eead111-34d9-4f7c-95d3-85291071124e",
+        "medicineId": "c8c17772-e5b3-4692-9d4d-88624899e63d"
+      },
+      {
+        "id": "0dd5f9e5-538d-41a1-897f-402fb62d92c0",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "71698848-f67d-4500-8497-ba0c19849877",
+        "quantity": -3,
+        "createdAt": "2026-11-15T04:00:22.078Z",
+        "reference": "fb44a2ee-f4fd-4ee5-8c38-1f818eca958b",
+        "medicineId": "d8601a33-cf6a-43bd-9d7b-3dfa9a1b3ef3"
+      },
+      {
+        "id": "947118ab-a632-40e8-9c54-3b36518a8ed2",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "32bae3ff-1a8e-4e54-8dd3-b7a550573ffb",
+        "quantity": -2,
+        "createdAt": "2026-11-15T04:00:22.046Z",
+        "reference": "67c22992-715b-412f-8392-40b10acdba2f",
+        "medicineId": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d"
+      },
+      {
+        "id": "5caf3d98-de19-45bb-9e4e-637678a4cb32",
+        "type": "sale",
+        "reason": "Checkout",
+        "batchId": "662d1992-8bf1-421d-b545-76298dcca670",
+        "quantity": -1,
+        "createdAt": "2026-11-15T04:00:22.008Z",
+        "reference": "b4c2d928-7846-44c0-8b29-fa1e4f274b70",
+        "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2"
+      },
+      {
+        "id": "5d42dbe7-a038-4d0b-bf3e-ffc6cd535d9e",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "acda0c1a-2d38-4c17-9c0c-3eae785cbe1b",
+        "quantity": 10,
+        "createdAt": "2026-11-15T04:00:21.857Z",
+        "reference": "acda0c1a-2d38-4c17-9c0c-3eae785cbe1b",
+        "medicineId": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d"
+      },
+      {
+        "id": "b158c40d-030f-4ea6-9f1e-bd00a675a71a",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "766e9993-9d73-4583-badf-1be3637df803",
+        "quantity": 15,
+        "createdAt": "2026-11-15T04:00:21.833Z",
+        "reference": "766e9993-9d73-4583-badf-1be3637df803",
+        "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2"
+      },
+      {
+        "id": "2fbbfa30-9929-436b-983f-405a49021bed",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "d03bee46-364a-4c2c-9a07-edb1d3d39edb",
+        "quantity": 20,
+        "createdAt": "2026-11-15T04:00:21.811Z",
+        "reference": "d03bee46-364a-4c2c-9a07-edb1d3d39edb",
+        "medicineId": "eb30c1bc-e3ec-43ce-9f79-2c8ca1ea10da"
+      },
+      {
+        "id": "dcd5bfd2-2ed6-4cf5-99b3-d8046b647482",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "6e3ac9c7-0cba-44b9-8a87-b66ea991a7af",
+        "quantity": 48,
+        "createdAt": "2026-11-15T04:00:21.766Z",
+        "reference": "6e3ac9c7-0cba-44b9-8a87-b66ea991a7af",
+        "medicineId": "101b7c06-45e0-4c99-af0e-9b22f5abce17"
+      },
+      {
+        "id": "dfe29615-30aa-4e0c-a9e5-76947796eff4",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "3c84293f-7e1c-44ce-8793-84d973fa6ed6",
+        "quantity": 200,
+        "createdAt": "2026-11-15T04:00:21.723Z",
+        "reference": "3c84293f-7e1c-44ce-8793-84d973fa6ed6",
+        "medicineId": "62d67a48-83eb-4fa9-bb5b-035bb43915c0"
+      },
+      {
+        "id": "8566e6a9-aaee-4946-8558-571127f70c94",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "1da7a28a-9765-44ce-ac66-3a5b7efb0a02",
+        "quantity": 110,
+        "createdAt": "2026-11-15T04:00:21.678Z",
+        "reference": "1da7a28a-9765-44ce-ac66-3a5b7efb0a02",
+        "medicineId": "ea616d33-d076-47f7-9600-990aa7a37d92"
+      },
+      {
+        "id": "99ee812d-6b33-4b14-be8f-ebdd2600cbab",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "ccbd14c3-2190-4809-b241-31cdee921bfa",
+        "quantity": 8,
+        "createdAt": "2026-11-15T04:00:21.637Z",
+        "reference": "ccbd14c3-2190-4809-b241-31cdee921bfa",
+        "medicineId": "3755cf09-3888-4324-b6e7-c8f1bcabf73e"
+      },
+      {
+        "id": "9324fd62-3fb7-40e2-9dc6-ed1e27e749e1",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "58b70d23-a7d5-464b-b3d5-7ee3057520e0",
+        "quantity": 28,
+        "createdAt": "2026-11-15T04:00:21.595Z",
+        "reference": "58b70d23-a7d5-464b-b3d5-7ee3057520e0",
+        "medicineId": "de12bf8a-0d8b-46c4-abbb-de91c2b2ad8c"
+      },
+      {
+        "id": "9d880b6f-4035-45b3-8f29-ac3a28bf3323",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "0d3e7408-b036-4f0a-b6f3-085df74102bb",
+        "quantity": 35,
+        "createdAt": "2026-11-15T04:00:21.557Z",
+        "reference": "0d3e7408-b036-4f0a-b6f3-085df74102bb",
+        "medicineId": "91e2c785-b5d9-4fe7-b871-c1bfd93e6781"
+      },
+      {
+        "id": "4c0a9479-f2de-4c80-924d-af6d81ff1948",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "b5f7acca-232c-4019-98e4-3f743047fcb8",
+        "quantity": 12,
+        "createdAt": "2026-11-15T04:00:21.519Z",
+        "reference": "b5f7acca-232c-4019-98e4-3f743047fcb8",
+        "medicineId": "98453472-e593-4f53-9504-adb6c2a87b35"
+      },
+      {
+        "id": "725d70a6-5431-4aca-a4f8-8e0825930890",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "7f655d8b-4fcf-4776-9d51-e92f055151ca",
+        "quantity": 120,
+        "createdAt": "2026-11-15T04:00:21.483Z",
+        "reference": "7f655d8b-4fcf-4776-9d51-e92f055151ca",
+        "medicineId": "6fe2f7eb-b973-4bf6-ab82-cf5285a59d41"
+      },
+      {
+        "id": "d0f8ad93-cdca-47d6-b38e-13ae62c71bcb",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "dabe89a3-f0f0-4abc-84f1-ca4116b2fb64",
+        "quantity": 95,
+        "createdAt": "2026-11-15T04:00:21.444Z",
+        "reference": "dabe89a3-f0f0-4abc-84f1-ca4116b2fb64",
+        "medicineId": "7ec7a469-f68f-4153-907e-476cd25b1d13"
+      },
+      {
+        "id": "4853a009-8af9-4919-ac32-ea139edc3dda",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "5c002b21-d63b-4897-a1a3-58673e24f36c",
+        "quantity": 18,
+        "createdAt": "2026-11-15T04:00:21.400Z",
+        "reference": "5c002b21-d63b-4897-a1a3-58673e24f36c",
+        "medicineId": "c8c17772-e5b3-4692-9d4d-88624899e63d"
+      },
+      {
+        "id": "18047a72-db16-43d7-9801-9987838b9f10",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "71698848-f67d-4500-8497-ba0c19849877",
+        "quantity": 42,
+        "createdAt": "2026-11-15T04:00:21.362Z",
+        "reference": "71698848-f67d-4500-8497-ba0c19849877",
+        "medicineId": "d8601a33-cf6a-43bd-9d7b-3dfa9a1b3ef3"
+      },
+      {
+        "id": "3ff05154-fa81-4a5e-95ae-0e86223316c1",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "32bae3ff-1a8e-4e54-8dd3-b7a550573ffb",
+        "quantity": 65,
+        "createdAt": "2026-11-15T04:00:21.321Z",
+        "reference": "32bae3ff-1a8e-4e54-8dd3-b7a550573ffb",
+        "medicineId": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d"
+      },
+      {
+        "id": "9d9fa430-b0d6-4874-87d6-f20893bd3e48",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "50053e2f-ef9c-45f2-9052-e1c819c99ddb",
+        "quantity": 80,
+        "createdAt": "2026-11-15T04:00:21.271Z",
+        "reference": "50053e2f-ef9c-45f2-9052-e1c819c99ddb",
+        "medicineId": "f44762c2-9af5-4ec7-b879-466c7f94eba2"
+      },
+      {
+        "id": "e07134f0-dffd-4de6-8b2a-b743ce601791",
+        "type": "opening",
+        "reason": "Opening stock",
+        "batchId": "662d1992-8bf1-421d-b545-76298dcca670",
+        "quantity": 150,
+        "createdAt": "2026-11-15T04:00:21.217Z",
+        "reference": "662d1992-8bf1-421d-b545-76298dcca670",
+        "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2"
+      }
+    ],
+    "purchase-returns": [],
+    "cash-registers": [],
+    "adjustments": [],
+    "transfers": [],
+    "audit": [],
+    "purchases": [
+      {
+        "id": "38cd1915-4fe3-4494-8abf-4ff45eed2513",
+        "items": [
+          {
+            "location": "Shelf C",
+            "quantity": 50,
+            "unitPrice": 800,
+            "expiryDate": "2027-11-15",
+            "medicineId": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d",
+            "batchNumber": "PO-DEMO-2"
+          }
+        ],
+        "notes": "Fictional replenishment order",
+        "total": 40000,
+        "status": "ordered",
+        "createdAt": "2026-11-15T04:00:21.913Z",
+        "reference": "PO-1794715221913-03bd",
+        "supplierId": "99393930-10ac-4d2a-ae87-79ae3cc20b4f",
+        "expectedDate": "2026-11-19",
+        "paymentStatus": "unpaid"
+      },
+      {
+        "id": "5cb6e39e-1a88-463d-9fb0-fc2682338e13",
+        "items": [
+          {
+            "location": "Shelf B",
+            "quantity": 50,
+            "unitPrice": 320,
+            "expiryDate": "2027-11-15",
+            "medicineId": "f44762c2-9af5-4ec7-b879-466c7f94eba2",
+            "batchNumber": "PO-DEMO-1"
+          }
+        ],
+        "notes": "Fictional replenishment order",
+        "total": 16000,
+        "status": "ordered",
+        "createdAt": "2026-11-15T04:00:21.896Z",
+        "reference": "PO-1794715221896-896c",
+        "supplierId": "bdb9f1b2-906c-4cbf-9907-af25f07c0469",
+        "expectedDate": "2026-11-18",
+        "paymentStatus": "unpaid"
+      },
+      {
+        "id": "b5648ab5-4c0a-453b-9ee9-35d531b6c348",
+        "items": [
+          {
+            "location": "Shelf A",
+            "quantity": 50,
+            "unitPrice": 120,
+            "expiryDate": "2027-11-15",
+            "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2",
+            "batchNumber": "PO-DEMO-0"
+          }
+        ],
+        "notes": "Fictional replenishment order",
+        "total": 6000,
+        "status": "ordered",
+        "createdAt": "2026-11-15T04:00:21.878Z",
+        "reference": "PO-1794715221878-7bab",
+        "supplierId": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "expectedDate": "2026-11-17",
+        "paymentStatus": "unpaid"
+      }
+    ],
+    "sales": [
+      {
+        "id": "6640eb01-8fd1-4d5d-bdd2-303b82fa4079",
+        "tax": 0,
+        "items": [
+          {
+            "total": 750,
+            "batchId": "662d1992-8bf1-421d-b545-76298dcca670",
+            "quantity": 3,
+            "costPrice": 120,
+            "unitPrice": 250,
+            "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2",
+            "batchNumber": "B-2026-001",
+            "medicineName": "Paracetamol 500mg"
+          }
+        ],
+        "total": 750,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 750,
+        "createdAt": "2026-11-15T06:00:00.000Z",
+        "amountPaid": 750,
+        "customerId": "dd1a8e62-651a-4e5b-99e2-914e3ee970a9",
+        "cashierName": "Alex Morgan",
+        "customerName": "Robert Brown",
+        "invoiceNumber": "INV-1794715222411-14b1",
+        "paymentMethod": "card",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "a21c340d-03e6-4bab-b61d-eb1058b10fd6",
+        "tax": 0,
+        "items": [
+          {
+            "total": 600,
+            "batchId": "6e3ac9c7-0cba-44b9-8a87-b66ea991a7af",
+            "quantity": 2,
+            "costPrice": 150,
+            "unitPrice": 300,
+            "medicineId": "101b7c06-45e0-4c99-af0e-9b22f5abce17",
+            "batchNumber": "B-2026-014",
+            "medicineName": "Loratadine 10mg"
+          }
+        ],
+        "total": 600,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 600,
+        "createdAt": "2026-11-14T06:00:00.000Z",
+        "amountPaid": 600,
+        "customerId": "3a6037d1-59d5-438e-a3ca-de2dc038810b",
+        "cashierName": "Alex Morgan",
+        "customerName": "Aisha Rahman",
+        "invoiceNumber": "INV-1794715222365-6b8d",
+        "paymentMethod": "cash",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "ddb23f80-cb35-48b6-a932-0f0498f16e3d",
+        "tax": 0,
+        "items": [
+          {
+            "total": 180,
+            "batchId": "3c84293f-7e1c-44ce-8793-84d973fa6ed6",
+            "quantity": 1,
+            "costPrice": 90,
+            "unitPrice": 180,
+            "medicineId": "62d67a48-83eb-4fa9-bb5b-035bb43915c0",
+            "batchNumber": "B-2026-013",
+            "medicineName": "Oral Rehydration Salts"
+          }
+        ],
+        "total": 180,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 180,
+        "createdAt": "2026-11-13T06:00:00.000Z",
+        "amountPaid": 180,
+        "customerId": "a3db57fb-b992-43f4-8179-fe9b3800d28a",
+        "cashierName": "Alex Morgan",
+        "customerName": "David Wilson",
+        "invoiceNumber": "INV-1794715222321-566c",
+        "paymentMethod": "card",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "d5c4c587-6d6c-4126-b607-c01418bfc12b",
+        "tax": 0,
+        "items": [
+          {
+            "total": 900,
+            "batchId": "1da7a28a-9765-44ce-ac66-3a5b7efb0a02",
+            "quantity": 3,
+            "costPrice": 150,
+            "unitPrice": 300,
+            "medicineId": "ea616d33-d076-47f7-9600-990aa7a37d92",
+            "batchNumber": "B-2026-012",
+            "medicineName": "Zinc 20mg"
+          }
+        ],
+        "total": 900,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 900,
+        "createdAt": "2026-11-12T06:00:00.000Z",
+        "amountPaid": 900,
+        "customerId": "9b234bd7-7e8d-4b37-9279-62c0d52b976d",
+        "cashierName": "Alex Morgan",
+        "customerName": "Nadia Islam",
+        "invoiceNumber": "INV-1794715222286-6709",
+        "paymentMethod": "cash",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "70957d09-da12-4587-922d-869f08e4bc2f",
+        "tax": 0,
+        "items": [
+          {
+            "total": 3000,
+            "batchId": "ccbd14c3-2190-4809-b241-31cdee921bfa",
+            "quantity": 2,
+            "costPrice": 900,
+            "unitPrice": 1500,
+            "medicineId": "3755cf09-3888-4324-b6e7-c8f1bcabf73e",
+            "batchNumber": "B-2026-011",
+            "medicineName": "Antacid Suspension"
+          }
+        ],
+        "total": 3000,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 3000,
+        "createdAt": "2026-11-11T06:00:00.000Z",
+        "amountPaid": 3000,
+        "customerId": "cbdaf709-7b10-42fa-af1d-bf0909a46aeb",
+        "cashierName": "Alex Morgan",
+        "customerName": "Michael Chen",
+        "invoiceNumber": "INV-1794715222243-56ea",
+        "paymentMethod": "card",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "83820f75-2a0f-4b5b-ad79-0d850a4e6f28",
+        "tax": 0,
+        "items": [
+          {
+            "total": 1800,
+            "batchId": "58b70d23-a7d5-464b-b3d5-7ee3057520e0",
+            "quantity": 1,
+            "costPrice": 1100,
+            "unitPrice": 1800,
+            "medicineId": "de12bf8a-0d8b-46c4-abbb-de91c2b2ad8c",
+            "batchNumber": "B-2026-010",
+            "medicineName": "Saline Nasal Spray"
+          }
+        ],
+        "total": 1800,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 1800,
+        "createdAt": "2026-11-10T06:00:00.000Z",
+        "amountPaid": 1800,
+        "customerId": "41554709-adf8-4e9c-8c37-b692378182a7",
+        "cashierName": "Alex Morgan",
+        "customerName": "Sarah Ahmed",
+        "invoiceNumber": "INV-1794715222203-d9a2",
+        "paymentMethod": "cash",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "a53f4be8-d33e-4fa6-ab3a-fb133ad6c09b",
+        "tax": 0,
+        "items": [
+          {
+            "total": 3000,
+            "batchId": "b5f7acca-232c-4019-98e4-3f743047fcb8",
+            "quantity": 3,
+            "costPrice": 550,
+            "unitPrice": 1000,
+            "medicineId": "98453472-e593-4f53-9504-adb6c2a87b35",
+            "batchNumber": "B-2026-008",
+            "medicineName": "Vitamin D3 2000 IU"
+          }
+        ],
+        "total": 3000,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 3000,
+        "createdAt": "2026-11-09T06:00:00.000Z",
+        "amountPaid": 3000,
+        "customerId": "dd1a8e62-651a-4e5b-99e2-914e3ee970a9",
+        "cashierName": "Alex Morgan",
+        "customerName": "Robert Brown",
+        "invoiceNumber": "INV-1794715222172-c01a",
+        "paymentMethod": "card",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "a4760bb0-8d77-48c9-9729-d863a75c7f89",
+        "tax": 0,
+        "items": [
+          {
+            "total": 700,
+            "batchId": "7f655d8b-4fcf-4776-9d51-e92f055151ca",
+            "quantity": 2,
+            "costPrice": 180,
+            "unitPrice": 350,
+            "medicineId": "6fe2f7eb-b973-4bf6-ab82-cf5285a59d41",
+            "batchNumber": "B-2026-007",
+            "medicineName": "Ibuprofen 400mg"
+          }
+        ],
+        "total": 700,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 700,
+        "createdAt": "2026-11-15T06:00:00.000Z",
+        "amountPaid": 700,
+        "customerId": "3a6037d1-59d5-438e-a3ca-de2dc038810b",
+        "cashierName": "Alex Morgan",
+        "customerName": "Aisha Rahman",
+        "invoiceNumber": "INV-1794715222137-bee3",
+        "paymentMethod": "cash",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "7eead111-34d9-4f7c-95d3-85291071124e",
+        "tax": 0,
+        "items": [
+          {
+            "total": 250,
+            "batchId": "5c002b21-d63b-4897-a1a3-58673e24f36c",
+            "quantity": 1,
+            "costPrice": 100,
+            "unitPrice": 250,
+            "medicineId": "c8c17772-e5b3-4692-9d4d-88624899e63d",
+            "batchNumber": "B-2026-005",
+            "medicineName": "Cetirizine 10mg"
+          }
+        ],
+        "total": 250,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 250,
+        "createdAt": "2026-11-14T06:00:00.000Z",
+        "amountPaid": 250,
+        "customerId": "a3db57fb-b992-43f4-8179-fe9b3800d28a",
+        "cashierName": "Alex Morgan",
+        "customerName": "David Wilson",
+        "invoiceNumber": "INV-1794715222107-43c8",
+        "paymentMethod": "card",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "fb44a2ee-f4fd-4ee5-8c38-1f818eca958b",
+        "tax": 0,
+        "items": [
+          {
+            "total": 2400,
+            "batchId": "71698848-f67d-4500-8497-ba0c19849877",
+            "quantity": 3,
+            "costPrice": 420,
+            "unitPrice": 800,
+            "medicineId": "d8601a33-cf6a-43bd-9d7b-3dfa9a1b3ef3",
+            "batchNumber": "B-2026-004",
+            "medicineName": "Omeprazole 20mg"
+          }
+        ],
+        "total": 2400,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 2400,
+        "createdAt": "2026-11-13T06:00:00.000Z",
+        "amountPaid": 2400,
+        "customerId": "9b234bd7-7e8d-4b37-9279-62c0d52b976d",
+        "cashierName": "Alex Morgan",
+        "customerName": "Nadia Islam",
+        "invoiceNumber": "INV-1794715222075-1771",
+        "paymentMethod": "cash",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "67c22992-715b-412f-8392-40b10acdba2f",
+        "tax": 0,
+        "items": [
+          {
+            "total": 2800,
+            "batchId": "32bae3ff-1a8e-4e54-8dd3-b7a550573ffb",
+            "quantity": 2,
+            "costPrice": 800,
+            "unitPrice": 1400,
+            "medicineId": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d",
+            "batchNumber": "B-2026-003",
+            "medicineName": "Vitamin C 1000mg"
+          }
+        ],
+        "total": 2800,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 2800,
+        "createdAt": "2026-11-12T06:00:00.000Z",
+        "amountPaid": 2800,
+        "customerId": "cbdaf709-7b10-42fa-af1d-bf0909a46aeb",
+        "cashierName": "Alex Morgan",
+        "customerName": "Michael Chen",
+        "invoiceNumber": "INV-1794715222044-ad93",
+        "paymentMethod": "card",
+        "paymentStatus": "paid"
+      },
+      {
+        "id": "b4c2d928-7846-44c0-8b29-fa1e4f274b70",
+        "tax": 0,
+        "items": [
+          {
+            "total": 250,
+            "batchId": "662d1992-8bf1-421d-b545-76298dcca670",
+            "quantity": 1,
+            "costPrice": 120,
+            "unitPrice": 250,
+            "medicineId": "e0469604-0905-4e5e-9b83-9e79811e2bd2",
+            "batchNumber": "B-2026-001",
+            "medicineName": "Paracetamol 500mg"
+          }
+        ],
+        "total": 250,
+        "status": "completed",
+        "userId": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "discount": 0,
+        "subtotal": 250,
+        "createdAt": "2026-11-11T06:00:00.000Z",
+        "amountPaid": 250,
+        "customerId": "41554709-adf8-4e9c-8c37-b692378182a7",
+        "cashierName": "Alex Morgan",
+        "customerName": "Sarah Ahmed",
+        "invoiceNumber": "INV-1794715222004-c891",
+        "paymentMethod": "cash",
+        "paymentStatus": "paid"
+      }
+    ],
+    "sales-returns": [],
+    "suppliers": [
+      {
+        "id": "99393930-10ac-4d2a-ae87-79ae3cc20b4f",
+        "name": "Nova Care Logistics",
+        "email": "orders2@example.com",
+        "phone": "+880 1700 000100",
+        "status": "active",
+        "address": "Fictional Supply District, Dhaka",
+        "createdAt": "2026-11-15T04:00:20.942Z",
+        "paymentTerms": "Net 30",
+        "contactPerson": "Sam Chen"
+      },
+      {
+        "id": "bdb9f1b2-906c-4cbf-9907-af25f07c0469",
+        "name": "HealthBridge Wholesale",
+        "email": "orders1@example.com",
+        "phone": "+880 1700 000100",
+        "status": "active",
+        "address": "Fictional Supply District, Dhaka",
+        "createdAt": "2026-11-15T04:00:20.917Z",
+        "paymentTerms": "Net 30",
+        "contactPerson": "Omar Ahmed"
+      },
+      {
+        "id": "888c172f-bde2-43a1-99e9-f091e24c57cc",
+        "name": "MedSupply Distribution",
+        "email": "orders0@example.com",
+        "phone": "+880 1700 000100",
+        "status": "active",
+        "address": "Fictional Supply District, Dhaka",
+        "createdAt": "2026-11-15T04:00:20.888Z",
+        "paymentTerms": "Net 30",
+        "contactPerson": "Rina Das"
+      }
+    ],
+    "units": [
+      {
+        "id": "1b0f7fc1-babd-431f-9d04-98b233764566",
+        "name": "Box",
+        "createdAt": "2026-11-15T04:00:20.857Z",
+        "abbreviation": "box"
+      },
+      {
+        "id": "02c6a51d-2190-4f1f-8a54-916a8207abe8",
+        "name": "Bottle",
+        "createdAt": "2026-11-15T04:00:20.824Z",
+        "abbreviation": "btl"
+      },
+      {
+        "id": "9a2abb5f-7d52-44f1-87ee-7b9d683a697f",
+        "name": "Capsule",
+        "createdAt": "2026-11-15T04:00:20.788Z",
+        "abbreviation": "cap"
+      },
+      {
+        "id": "f6ec6a1a-46a1-41b5-a66d-ec72ef40057a",
+        "name": "Tablet",
+        "createdAt": "2026-11-15T04:00:20.754Z",
+        "abbreviation": "tab"
+      }
+    ],
+    "quotations": [
+      {
+        "id": "8fb13b4a-e4a8-4ccd-b12f-f654874ddb73",
+        "items": [
+          {
+            "quantity": 10,
+            "unitPrice": 1400,
+            "medicineId": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d"
+          }
+        ],
+        "notes": "Fictional bulk enquiry",
+        "total": 14000,
+        "status": "sent",
+        "createdAt": "2026-11-15T04:00:22.583Z",
+        "reference": "QUO-1794715222583-e2a8",
+        "customerId": "a3db57fb-b992-43f4-8179-fe9b3800d28a",
+        "validUntil": "2026-11-22",
+        "customerName": "David Wilson"
+      }
+    ],
+    "brands": [
+      {
+        "id": "f8fc4428-6ee5-4590-ac8c-32041b160352",
+        "name": "VitalHealth",
+        "createdAt": "2026-11-15T04:00:20.720Z",
+        "description": "Fictional demonstration brand",
+        "manufacturer": "VitalHealth Demo Manufacturing"
+      },
+      {
+        "id": "863b5b66-a16c-4f1c-b74f-dc1209757ed7",
+        "name": "Nova Pharma",
+        "createdAt": "2026-11-15T04:00:20.685Z",
+        "description": "Fictional demonstration brand",
+        "manufacturer": "Nova Pharma Demo Manufacturing"
+      },
+      {
+        "id": "8b4727d1-55b2-43c5-9e54-c870414a77b3",
+        "name": "CarePlus",
+        "createdAt": "2026-11-15T04:00:20.633Z",
+        "description": "Fictional demonstration brand",
+        "manufacturer": "CarePlus Demo Manufacturing"
+      },
+      {
+        "id": "975be0c2-d062-409b-8913-d8013fb05baf",
+        "name": "Wellness Labs",
+        "createdAt": "2026-11-15T04:00:20.603Z",
+        "description": "Fictional demonstration brand",
+        "manufacturer": "Wellness Labs Demo Manufacturing"
+      }
+    ],
+    "prescriptions": [
+      {
+        "id": "93b5ff1b-fe39-4c48-b1ed-192e44bd5118",
+        "date": "2026-11-15",
+        "items": [
+          {
+            "dosage": "As prescribed (demo only)",
+            "quantity": 3,
+            "medicineId": "91e2c785-b5d9-4fe7-b871-c1bfd93e6781",
+            "dispensedQuantity": 0
+          }
+        ],
+        "notes": "Awaiting pharmacist verification",
+        "status": "pending",
+        "createdAt": "2026-11-15T04:00:21.976Z",
+        "reference": "RX-1794715221976",
+        "customerId": "9b234bd7-7e8d-4b37-9279-62c0d52b976d",
+        "expiryDate": "2026-12-15",
+        "prescriberName": "Dr. Casey Lee (fictional)",
+        "prescriberLicense": "DEMO-MD-1002"
+      },
+      {
+        "id": "7345c802-5c93-489e-b9a5-3190e3b827ee",
+        "date": "2026-11-14",
+        "items": [
+          {
+            "dosage": "One tablet twice daily (demo only)",
+            "quantity": 14,
+            "medicineId": "f44762c2-9af5-4ec7-b879-466c7f94eba2",
+            "dispensedQuantity": 0
+          },
+          {
+            "dosage": "As prescribed (demo only)",
+            "quantity": 30,
+            "medicineId": "7ec7a469-f68f-4153-907e-476cd25b1d13",
+            "dispensedQuantity": 0
+          }
+        ],
+        "notes": "Fictional prescription for workflow demonstration",
+        "status": "verified",
+        "createdAt": "2026-11-15T04:00:21.937Z",
+        "reference": "RX-1794715221937",
+        "customerId": "41554709-adf8-4e9c-8c37-b692378182a7",
+        "expiryDate": "2026-12-14",
+        "verifiedAt": "2026-11-15T04:00:21.958Z",
+        "verifiedBy": "d2eaea1d-39e3-419b-b832-7668b257b010",
+        "prescriberName": "Dr. Taylor Morgan (fictional)",
+        "prescriberLicense": "DEMO-MD-1001"
+      }
+    ],
+    "customers": [
+      {
+        "id": "dd1a8e62-651a-4e5b-99e2-914e3ee970a9",
+        "name": "Robert Brown",
+        "email": "customer5@example.com",
+        "phone": "+880 1700 000200",
+        "status": "active",
+        "address": "Fictional Wellness Avenue, Dhaka",
+        "groupId": "1751c201-4ee4-494d-8631-39cbd4faded2",
+        "createdAt": "2026-11-15T04:00:21.150Z",
+        "totalPurchases": 3750,
+        "outstandingBalance": 0
+      },
+      {
+        "id": "3a6037d1-59d5-438e-a3ca-de2dc038810b",
+        "name": "Aisha Rahman",
+        "email": "customer4@example.com",
+        "phone": "+880 1700 000200",
+        "status": "active",
+        "address": "Fictional Wellness Avenue, Dhaka",
+        "groupId": "1751c201-4ee4-494d-8631-39cbd4faded2",
+        "createdAt": "2026-11-15T04:00:21.129Z",
+        "totalPurchases": 1300,
+        "outstandingBalance": 0
+      },
+      {
+        "id": "a3db57fb-b992-43f4-8179-fe9b3800d28a",
+        "name": "David Wilson",
+        "email": "customer3@example.com",
+        "phone": "+880 1700 000200",
+        "status": "active",
+        "address": "Fictional Wellness Avenue, Dhaka",
+        "groupId": "1751c201-4ee4-494d-8631-39cbd4faded2",
+        "createdAt": "2026-11-15T04:00:21.104Z",
+        "totalPurchases": 430,
+        "outstandingBalance": 0
+      },
+      {
+        "id": "9b234bd7-7e8d-4b37-9279-62c0d52b976d",
+        "name": "Nadia Islam",
+        "email": "customer2@example.com",
+        "phone": "+880 1700 000200",
+        "status": "active",
+        "address": "Fictional Wellness Avenue, Dhaka",
+        "groupId": "1751c201-4ee4-494d-8631-39cbd4faded2",
+        "createdAt": "2026-11-15T04:00:21.081Z",
+        "totalPurchases": 3300,
+        "outstandingBalance": 0
+      },
+      {
+        "id": "cbdaf709-7b10-42fa-af1d-bf0909a46aeb",
+        "name": "Michael Chen",
+        "email": "customer1@example.com",
+        "phone": "+880 1700 000200",
+        "status": "active",
+        "address": "Fictional Wellness Avenue, Dhaka",
+        "groupId": "1751c201-4ee4-494d-8631-39cbd4faded2",
+        "createdAt": "2026-11-15T04:00:21.056Z",
+        "totalPurchases": 5800,
+        "outstandingBalance": 0
+      },
+      {
+        "id": "41554709-adf8-4e9c-8c37-b692378182a7",
+        "name": "Sarah Ahmed",
+        "email": "customer0@example.com",
+        "phone": "+880 1700 000200",
+        "status": "active",
+        "address": "Fictional Wellness Avenue, Dhaka",
+        "groupId": "1751c201-4ee4-494d-8631-39cbd4faded2",
+        "createdAt": "2026-11-15T04:00:21.027Z",
+        "totalPurchases": 2050,
+        "outstandingBalance": 0
+      }
+    ],
+    "categories": [
+      {
+        "id": "100e73df-543b-471e-90cb-142366c53d7e",
+        "name": "Diabetes Care",
+        "createdAt": "2026-11-15T04:00:20.548Z",
+        "description": "Fictional demo diabetes care assortment"
+      },
+      {
+        "id": "f22d0daa-3e9f-4795-9e43-781ee2904544",
+        "name": "Allergy & Respiratory",
+        "createdAt": "2026-11-15T04:00:20.509Z",
+        "description": "Fictional demo allergy & respiratory assortment"
+      },
+      {
+        "id": "90e5b9ff-6e30-4cc3-8302-3251b1abcb1b",
+        "name": "Digestive Health",
+        "createdAt": "2026-11-15T04:00:20.473Z",
+        "description": "Fictional demo digestive health assortment"
+      },
+      {
+        "id": "4a7aa07e-8486-4fe8-9e6c-04e0efe7bca0",
+        "name": "Vitamins & Supplements",
+        "createdAt": "2026-11-15T04:00:20.446Z",
+        "description": "Fictional demo vitamins & supplements assortment"
+      },
+      {
+        "id": "279a3ac8-279e-4ff0-8c71-252eed3d3f2e",
+        "name": "Antibiotics",
+        "createdAt": "2026-11-15T04:00:20.417Z",
+        "description": "Fictional demo antibiotics assortment"
+      },
+      {
+        "id": "27cfe985-0910-4d36-a0b5-cd58510f42e4",
+        "name": "Pain Relief",
+        "createdAt": "2026-11-15T04:00:20.383Z",
+        "description": "Fictional demo pain relief assortment"
+      }
+    ],
+    "medicines": [
+      {
+        "id": "eb30c1bc-e3ec-43ce-9f79-2c8ca1ea10da",
+        "sku": "MED-0015",
+        "name": "Controlled Demo Tablet",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000015",
+        "brandId": "863b5b66-a16c-4f1c-b74f-dc1209757ed7",
+        "location": "Shelf E",
+        "strength": "",
+        "createdAt": "2026-11-15T04:00:21.787Z",
+        "categoryId": "27cfe985-0910-4d36-a0b5-cd58510f42e4",
+        "dosageForm": "Tablet",
+        "genericName": "Demonstration only",
+        "isControlled": true,
+        "reorderLevel": 20,
+        "sellingPrice": 900,
+        "purchasePrice": 500,
+        "requiresPrescription": true,
+        "currentStock": 20
+      },
+      {
+        "id": "101b7c06-45e0-4c99-af0e-9b22f5abce17",
+        "sku": "MED-0014",
+        "name": "Loratadine 10mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000014",
+        "brandId": "8b4727d1-55b2-43c5-9e54-c870414a77b3",
+        "location": "Shelf D",
+        "strength": "10mg",
+        "createdAt": "2026-11-15T04:00:21.742Z",
+        "categoryId": "f22d0daa-3e9f-4795-9e43-781ee2904544",
+        "dosageForm": "Tablet",
+        "genericName": "Loratadine",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 300,
+        "purchasePrice": 150,
+        "requiresPrescription": false,
+        "currentStock": 46
+      },
+      {
+        "id": "62d67a48-83eb-4fa9-bb5b-035bb43915c0",
+        "sku": "MED-0013",
+        "name": "Oral Rehydration Salts",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000013",
+        "brandId": "975be0c2-d062-409b-8913-d8013fb05baf",
+        "location": "Shelf C",
+        "strength": "",
+        "createdAt": "2026-11-15T04:00:21.701Z",
+        "categoryId": "90e5b9ff-6e30-4cc3-8302-3251b1abcb1b",
+        "dosageForm": "Tablet",
+        "genericName": "Electrolytes",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 180,
+        "purchasePrice": 90,
+        "requiresPrescription": false,
+        "currentStock": 199
+      },
+      {
+        "id": "ea616d33-d076-47f7-9600-990aa7a37d92",
+        "sku": "MED-0012",
+        "name": "Zinc 20mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000012",
+        "brandId": "f8fc4428-6ee5-4590-ac8c-32041b160352",
+        "location": "Shelf B",
+        "strength": "20mg",
+        "createdAt": "2026-11-15T04:00:21.657Z",
+        "categoryId": "4a7aa07e-8486-4fe8-9e6c-04e0efe7bca0",
+        "dosageForm": "Tablet",
+        "genericName": "Zinc sulfate",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 300,
+        "purchasePrice": 150,
+        "requiresPrescription": false,
+        "currentStock": 107
+      },
+      {
+        "id": "3755cf09-3888-4324-b6e7-c8f1bcabf73e",
+        "sku": "MED-0011",
+        "name": "Antacid Suspension",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000011",
+        "brandId": "863b5b66-a16c-4f1c-b74f-dc1209757ed7",
+        "location": "Shelf A",
+        "strength": "",
+        "createdAt": "2026-11-15T04:00:21.614Z",
+        "categoryId": "90e5b9ff-6e30-4cc3-8302-3251b1abcb1b",
+        "dosageForm": "Suspension",
+        "genericName": "Aluminium hydroxide",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 1500,
+        "purchasePrice": 900,
+        "requiresPrescription": false,
+        "currentStock": 6
+      },
+      {
+        "id": "de12bf8a-0d8b-46c4-abbb-de91c2b2ad8c",
+        "sku": "MED-0010",
+        "name": "Saline Nasal Spray",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000010",
+        "brandId": "8b4727d1-55b2-43c5-9e54-c870414a77b3",
+        "location": "Shelf E",
+        "strength": "",
+        "createdAt": "2026-11-15T04:00:21.575Z",
+        "categoryId": "f22d0daa-3e9f-4795-9e43-781ee2904544",
+        "dosageForm": "Spray",
+        "genericName": "Sodium chloride",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 1800,
+        "purchasePrice": 1100,
+        "requiresPrescription": false,
+        "currentStock": 27
+      },
+      {
+        "id": "91e2c785-b5d9-4fe7-b871-c1bfd93e6781",
+        "sku": "MED-0009",
+        "name": "Azithromycin 500mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000009",
+        "brandId": "975be0c2-d062-409b-8913-d8013fb05baf",
+        "location": "Shelf D",
+        "strength": "500mg",
+        "createdAt": "2026-11-15T04:00:21.536Z",
+        "categoryId": "279a3ac8-279e-4ff0-8c71-252eed3d3f2e",
+        "dosageForm": "Tablet",
+        "genericName": "Azithromycin",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 1800,
+        "purchasePrice": 1200,
+        "requiresPrescription": true,
+        "currentStock": 35
+      },
+      {
+        "id": "98453472-e593-4f53-9504-adb6c2a87b35",
+        "sku": "MED-0008",
+        "name": "Vitamin D3 2000 IU",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000008",
+        "brandId": "f8fc4428-6ee5-4590-ac8c-32041b160352",
+        "location": "Shelf C",
+        "strength": "3",
+        "createdAt": "2026-11-15T04:00:21.500Z",
+        "categoryId": "4a7aa07e-8486-4fe8-9e6c-04e0efe7bca0",
+        "dosageForm": "Tablet",
+        "genericName": "Cholecalciferol",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 1000,
+        "purchasePrice": 550,
+        "requiresPrescription": false,
+        "currentStock": 9
+      },
+      {
+        "id": "6fe2f7eb-b973-4bf6-ab82-cf5285a59d41",
+        "sku": "MED-0007",
+        "name": "Ibuprofen 400mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000007",
+        "brandId": "863b5b66-a16c-4f1c-b74f-dc1209757ed7",
+        "location": "Shelf B",
+        "strength": "400mg",
+        "createdAt": "2026-11-15T04:00:21.462Z",
+        "categoryId": "27cfe985-0910-4d36-a0b5-cd58510f42e4",
+        "dosageForm": "Tablet",
+        "genericName": "Ibuprofen",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 350,
+        "purchasePrice": 180,
+        "requiresPrescription": false,
+        "currentStock": 118
+      },
+      {
+        "id": "7ec7a469-f68f-4153-907e-476cd25b1d13",
+        "sku": "MED-0006",
+        "name": "Metformin 500mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000006",
+        "brandId": "8b4727d1-55b2-43c5-9e54-c870414a77b3",
+        "location": "Shelf A",
+        "strength": "500mg",
+        "createdAt": "2026-11-15T04:00:21.418Z",
+        "categoryId": "100e73df-543b-471e-90cb-142366c53d7e",
+        "dosageForm": "Tablet",
+        "genericName": "Metformin",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 450,
+        "purchasePrice": 220,
+        "requiresPrescription": true,
+        "currentStock": 95
+      },
+      {
+        "id": "c8c17772-e5b3-4692-9d4d-88624899e63d",
+        "sku": "MED-0005",
+        "name": "Cetirizine 10mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000005",
+        "brandId": "975be0c2-d062-409b-8913-d8013fb05baf",
+        "location": "Shelf E",
+        "strength": "10mg",
+        "createdAt": "2026-11-15T04:00:21.380Z",
+        "categoryId": "f22d0daa-3e9f-4795-9e43-781ee2904544",
+        "dosageForm": "Tablet",
+        "genericName": "Cetirizine",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 250,
+        "purchasePrice": 100,
+        "requiresPrescription": false,
+        "currentStock": 17
+      },
+      {
+        "id": "d8601a33-cf6a-43bd-9d7b-3dfa9a1b3ef3",
+        "sku": "MED-0004",
+        "name": "Omeprazole 20mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000004",
+        "brandId": "f8fc4428-6ee5-4590-ac8c-32041b160352",
+        "location": "Shelf D",
+        "strength": "20mg",
+        "createdAt": "2026-11-15T04:00:21.339Z",
+        "categoryId": "90e5b9ff-6e30-4cc3-8302-3251b1abcb1b",
+        "dosageForm": "Tablet",
+        "genericName": "Omeprazole",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 800,
+        "purchasePrice": 420,
+        "requiresPrescription": false,
+        "currentStock": 39
+      },
+      {
+        "id": "da45f03d-ee8b-41d9-882a-4fc2a7861e3d",
+        "sku": "MED-0003",
+        "name": "Vitamin C 1000mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000003",
+        "brandId": "863b5b66-a16c-4f1c-b74f-dc1209757ed7",
+        "location": "Shelf C",
+        "strength": "1000mg",
+        "createdAt": "2026-11-15T04:00:21.297Z",
+        "categoryId": "4a7aa07e-8486-4fe8-9e6c-04e0efe7bca0",
+        "dosageForm": "Tablet",
+        "genericName": "Ascorbic acid",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 1400,
+        "purchasePrice": 800,
+        "requiresPrescription": false,
+        "currentStock": 63
+      },
+      {
+        "id": "f44762c2-9af5-4ec7-b879-466c7f94eba2",
+        "sku": "MED-0002",
+        "name": "Amoxicillin 250mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000002",
+        "brandId": "8b4727d1-55b2-43c5-9e54-c870414a77b3",
+        "location": "Shelf B",
+        "strength": "250mg",
+        "createdAt": "2026-11-15T04:00:21.240Z",
+        "categoryId": "279a3ac8-279e-4ff0-8c71-252eed3d3f2e",
+        "dosageForm": "Tablet",
+        "genericName": "Amoxicillin",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 600,
+        "purchasePrice": 320,
+        "requiresPrescription": true,
+        "currentStock": 80
+      },
+      {
+        "id": "e0469604-0905-4e5e-9b83-9e79811e2bd2",
+        "sku": "MED-0001",
+        "name": "Paracetamol 500mg",
+        "unit": "Tablet",
+        "status": "active",
+        "barcode": "8901000000001",
+        "brandId": "975be0c2-d062-409b-8913-d8013fb05baf",
+        "location": "Shelf A",
+        "strength": "500mg",
+        "createdAt": "2026-11-15T04:00:21.179Z",
+        "categoryId": "27cfe985-0910-4d36-a0b5-cd58510f42e4",
+        "dosageForm": "Tablet",
+        "genericName": "Acetaminophen",
+        "isControlled": false,
+        "reorderLevel": 20,
+        "sellingPrice": 250,
+        "purchasePrice": 120,
+        "requiresPrescription": false,
+        "currentStock": 146
+      }
+    ]
+  },
+  "settings": {
+    "email": "hello@pharmaflow.local",
+    "phone": "+880 1700 000000",
+    "theme": "light",
+    "address": "24 Wellness Avenue, Dhaka (fictional)",
+    "taxRate": 0,
+    "currency": "USD",
+    "timezone": "Asia/Dhaka",
+    "expiryAlerts": true,
+    "pharmacyName": "PharmaFlow Demo Pharmacy",
+    "invoicePrefix": "INV",
+    "receiptFooter": "Thank you for choosing PharmaFlow.",
+    "lowStockAlerts": true,
+    "expiryWarningDays": 90
+  },
+  "demoGeneratedAt": "2026-11-15T06:00:00.000Z"
+}

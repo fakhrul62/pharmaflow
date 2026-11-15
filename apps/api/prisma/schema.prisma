@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+model Record {
+  id String @id @default(uuid())
+  resource String
+  data Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([resource, createdAt])
+}
+model User {
+  id String @id @default(uuid())
+  name String
+  email String @unique
+  role String
+  status String @default("active")
+  passwordHash String
+  sessions Session[]
+}
+model Session {
+  id String @id
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  @@index([expiresAt])
+}
+model Setting {
+  id String @id @default("default")
+  data Json
+}
+model Idempotency {
+  key String @id
+  userId String
+  operation String
+  requestHash String
+  result Json
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: pharmaflow
+      POSTGRES_USER: pharmaflow
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pharmaflow_local_only}
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - pharmaflow_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pharmaflow -d pharmaflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+volumes:
+  pharmaflow_data:

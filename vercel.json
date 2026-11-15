@@ -1,0 +1,8 @@
+{
+  "buildCommand": "VITE_PORTFOLIO_DEMO=true npm run build -w @pharmaflow/web",
+  "outputDirectory": "apps/web/dist",
+  "framework": "vite",
+  "env": {"VITE_PORTFOLIO_DEMO": "true"},
+  "rewrites": [{"source":"/((?!case-study/|showcase/|assets/|favicon.svg|social-preview.png).*)","destination":"/index.html"}],
+  "headers": [{"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},{"key":"X-Frame-Options","value":"DENY"}]}]
+}

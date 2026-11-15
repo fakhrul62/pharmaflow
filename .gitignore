@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+playwright-report/
+test-results/
+.local/
+*.tsbuildinfo
+.vercel/
+apps/web/public/showcase/walkthrough.webm
+
+.vercel
+.env*
+!.env.example
