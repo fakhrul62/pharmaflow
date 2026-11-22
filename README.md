@@ -6,7 +6,7 @@ A redesigned pharmacy management workspace built with React, Vite, TypeScript, N
 
 The public Vercel build is a **read-only fictional preview**, with 30 minute browser sessions, no credentials and no live database. The normal local app below uses the real NestJS API and PostgreSQL and supports all write workflows. See the hosted `/case-study/` for the design story, screenshots and captioned walkthrough.
 
-[Live preview](https://pharmaflow-silk.vercel.app) · [Case study and video](https://pharmaflow-silk.vercel.app/case-study/) · [Source](https://github.com/fakhrul62/pharmaflow)
+[Live preview](https://pharmaflow-silk.vercel.app) · [Case study and video](https://pharmaflow-silk.vercel.app/case-study/) · [Source](https://github.com/fakhrul62/pharmaflow) · [Portfolio project](https://fakhrulalam.site/work/pharmaflow/)
 
 See [deployment instructions](docs/deployment.md), [source and asset provenance](docs/source-provenance.md), and [release verification](docs/release-verification.md). The Dockerfile serves both applications on one origin; `render.yaml` is an optional deployment blueprint. GitHub Actions checks the full application against PostgreSQL.
 
